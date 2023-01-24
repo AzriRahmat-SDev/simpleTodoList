@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { Container, Typography, Box } from '@mui/material';
+import image from './images/bg-desktop-light.jpg';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<Container
+			maxWidth="false"
+			sx={{
+				bgcolor: '#e4e5f1',
+				backgroundPosition: 'center center',
+				backgroundImage: `url(${image})`,
+				backgroundRepeat: 'no-repeat',
+				backgroundSize: 'cover',
+				height: '40vh',
+				width: '100vw',
+			}}
+		>
+			<Box>
+				<Typography variant="h1" color="primary.light" textAlign="center">
+					Todo
+				</Typography>
+			</Box>
+		</Container>
+	);
 }
 
 export default App;
